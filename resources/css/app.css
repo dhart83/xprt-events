@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&family=Playfair+Display:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Background: #1E1E1E
+Current Line Background: #333333
+Selection Background: #3A3D41
+Foreground: #D4D4D4
+Comment: #6A9955
+Cyan: #4EC9B0
+Green: #B5CEA8
+Orange: #CE9178
+Pink: #D16969
+Purple: #C586C0
+Red: #D16969
+Yellow: #D7BA7D
+Blue: #569CD6
+Variable: #9CDCFE
+Function: #DCDCAA
+Constant: #4EC9B0 */
+
+    :root {
+        --color-primary: #c026d3; /* Fuchsia */
+        --color-secondary: #6366f1; /* Blue */
+        --color-accent: #ffaa00; /* Orange */
+
+        --bg-dark: #1e1e1e; /* Dark background */
+        --bg-light: #ffffff; /* Light background */
+
+        --text-dark: #333333; /* Dark text on light background */
+        --text-dark-primary: #b018c4;
+        --text-dark-secondary: #4d50f3;
+
+        --text-light: #e2e8f0; /* Light text on dark background */
+        --text-light-primary: #dc47f0;
+        --text-light-secondary: #aaacff;
+    }
+
+    /* Define header styles */
+    /* h1 {
+        @apply font-serif text-4xl sm:text-5xl md:text-6xl;
+    } */
+
+    select option {
+        @apply dark:bg-dark;
+    }
+
+    h1 {
+        @apply font-serif font-semibold text-3xl sm:text-4xl md:text-5xl mb-4;
+    }
+
+    h2 {
+        @apply font-serif font-semibold text-2xl sm:text-3xl md:text-4xl mb-4;
+    }
+
+    h3 {
+        @apply font-serif font-semibold text-xl mb-4;
+    }
+
+    h4 {
+        @apply font-serif font-semibold text-lg sm:text-xl md:text-2xl mb-4;
+    }
+
+    h5 {
+        @apply font-serif font-semibold text-base sm:text-lg md:text-xl mb-4;
+    }
+
+    /* Define paragraph styles */
+    p {
+    }
+
+    p,
+    li {
+        @apply text-base md:text-lg;
+    }
+
+    .step::before,
+    .step::after {
+        content: "";
+        position: absolute;
+        @apply hidden md:block w-14 h-14 top-16 -translate-x-1/2 -translate-y-1/4;
+    }
+
+    .step::before {
+        @apply bg-light dark:bg-dark;
+    }
+
+    .step::after {
+        @apply w-2 h-2 rounded-full bg-secondary translate-y-2.5;
+    }
+
+    .btn {
+        @apply inline-block text-center rounded-lg py-3 px-7 text-sm font-semibold transition ease-in-out delay-[25ms] duration-300;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white;
+    }
+
+    .btn-secondary {
+        @apply hover:bg-primary border hover:border-primary hover:text-white;
+    }
+
+    .marquee {
+    }
+
+    .marquee-inner {
+        @apply flex flex-wrap justify-center w-fit gap-6 py-4;
+    }
+
+    .marquee[data-animated="true"] {
+        @apply overflow-hidden;
+        mask: linear-gradient(
+            90deg,
+            transparent,
+            white 15%,
+            white 85%,
+            transparent
+        );
+    }
+
+    .marquee[data-animated="true"] .marquee-inner {
+        @apply flex-nowrap justify-normal;
+        animation: scroll 60s linear infinite;
+    }
+
+    @keyframes scroll {
+        to {
+            transform: translateX(calc(-50% - 0.75rem));
+        }
+    }
+}
