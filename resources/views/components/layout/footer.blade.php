@@ -29,22 +29,12 @@
                         <h4 class="mb-9 text-lg font-semibold">Quick Links</h4>
                         <ul>
                             <li>
-                                <a href="javascript:void(0)" class="mb-2 inline-block leading-loose">
+                                <a href="{{ route('home') }}" class="mb-2 inline-block leading-loose">
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" class="mb-2 inline-block leading-loose">
-                                    Services
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" class="mb-2 inline-block leading-loose">
-                                    Pricing
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" class="mb-2 inline-block leading-loose">
+                                <a href="{{ route('contact.index') }}" class="mb-2 inline-block leading-loose">
                                     Contact
                                 </a>
                             </li>
