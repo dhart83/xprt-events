@@ -1,7 +1,6 @@
 import "./bootstrap";
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    console.log(event);
     const marquees = document.querySelectorAll(".marquee");
 
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -15,11 +14,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
             const marqueeInnerWidth = marqueeInner.scrollWidth;
             const marqueeInnerChildren = Array.from(marqueeInner.children);
 
-            console.log("Marquee:", marquee);
-            console.log("Marquee Width:", marqueeWidth);
+            // console.log("Marquee:", marquee);
+            // console.log("Marquee Width:", marqueeWidth);
 
-            console.log("Marquee Inner:", marqueeInner);
-            console.log("Marque Inner Width:", marqueeInnerWidth);
+            // console.log("Marquee Inner:", marqueeInner);
+            // console.log("Marque Inner Width:", marqueeInnerWidth);
 
             marqueeInnerChildren.forEach((child) => {
                 const clonedChild = child.cloneNode(true);

@@ -116,15 +116,36 @@ Constant: #4EC9B0 */
         mask: linear-gradient(
             90deg,
             transparent,
-            white 15%,
-            white 85%,
+            white 5%,
+            white 95%,
             transparent
         );
     }
 
     .marquee[data-animated="true"] .marquee-inner {
         @apply flex-nowrap justify-normal;
-        animation: scroll 60s linear infinite;
+        animation: scroll var(--_animation-duration, 40s)
+            var(--_animation-direction, forwards) linear infinite;
+    }
+
+    .marquee[data-speed="slow"] {
+        --_animation-duration: 80s;
+    }
+
+    .marquee[data-speed="medium"] {
+        --_animation-duration: 60s;
+    }
+
+    .marquee[data-speed="fast"] {
+        --_animation-duration: 40s;
+    }
+
+    .marquee[data-direction="right"] {
+        --_animation-direction: reverse;
+    }
+
+    .marquee[data-direction="left"] {
+        --_animation-direction: forwards;
     }
 
     @keyframes scroll {
