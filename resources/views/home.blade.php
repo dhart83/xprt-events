@@ -4,6 +4,7 @@
     <x-home.features />
     <x-banner.cta />
     <x-home.a-la-carte />
+    <x-home.packages />
     <x-layout.section>
         <x-layout.container>
             <x-form.contact />

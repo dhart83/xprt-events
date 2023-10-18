@@ -49,10 +49,10 @@
                         skin-smoothing filters. Get ready to shine, and let us make your memories unforgettable.
                     </p>
                 </div>
-                <div class="flex flex-col md:flex-row gap-3">
+                {{-- <div class="flex flex-col md:flex-row gap-3">
                     <a class="btn btn-primary" href="{{ route('contact.index') }}">Book Now</a>
                     <a class="btn btn-secondary" href="#section2">Learn More</a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </x-layout.container>

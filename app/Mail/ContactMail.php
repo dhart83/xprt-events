@@ -46,7 +46,6 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address($this->email),
             replyTo: [
                 new Address($this->email)
             ],
@@ -62,7 +61,7 @@ class ContactMail extends Mailable
         return new Content(
             markdown: 'email.contact',
             with: [
-                'url' => 'http://localhost:8000'
+                'url' => env('APP_URL')
             ]
         );
     }
