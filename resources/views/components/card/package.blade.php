@@ -8,13 +8,13 @@
             {{ $description }}
         </p>
         <div class="bg-blue-50 dark:bg-black/20 bg-opacity-50 rounded-lg text-center">
-            <p class="text-sm">Starting at</p>
+            <p class="text-sm mt-3">Starting at</p>
             <h2 class="mb-5 mt-2 text-[42px] font-semibold font-sans">
-                <span class="text-center">${{ $price }}</span>
+                <span class="text-center"><span class="text-[36px]">$</span>{{ $price }}</span>
             </h2>
         </div>
         <div class="mt-8 border-t border-light dark:border-dark">
-            <p class="mt-6 font-semibold">Package includes:</p>
+            <p class="mt-6 font-semibold">Package Includes:</p>
             <div class="mb-7 mt-5">
                 <ul class="">
                     @foreach (explode(',', $includes) as $include)
@@ -30,6 +30,7 @@
         <a href="{{ $href }}" class="btn btn-{{$featured ? 'primary' : 'secondary'}} mt-auto">
             Choose {{ $name }}
         </a>
+        <div class="mt-3 text-[12px] italic text-center">* Pricing subject to change</div>
         <div>
             <span class="absolute right-0 top-7 z-[-1]">
                 <img src={{ asset('assets/images/accents/circle-seg-top-left.svg') }} alt="">
