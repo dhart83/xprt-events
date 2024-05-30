@@ -16,17 +16,17 @@
                             </span>
                             <span>contact@xprtevents.com</span>
                         </p>
-                        <p class="flex items-center text-sm font-medium">
+                        {{-- <p class="flex items-center text-sm font-medium">
                             <span class="mr-3">
                                 <x-icon.phone />
                             </span>
                             <span>(904) 555-5555</span>
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
                 <div class="">
                     <div class="mb-10 w-full">
-                        <h4 class="mb-9 text-lg font-semibold">Quick Links</h4>
+                        <h4 class="mb-9 text-lg font-semibold">Links</h4>
                         <ul>
                             <li>
                                 <a href="{{ route('home') }}" class="mb-2 inline-block leading-loose">

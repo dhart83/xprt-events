@@ -2,7 +2,7 @@
     <span class="text-secondary mb-2 block text-lg font-semibold">
         {{ $subHeading }}
     </span>
-    <h2 class="mb-4 font-bold text-2xl sm:text-4xl md:text-[40px]">
+    <h2 class="mb-4 font-bold text-3xl sm:text-4xl md:text-[40px]">
         {{ $slot }}
     </h2>
     @if ($description != '')

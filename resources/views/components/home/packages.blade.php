@@ -1,5 +1,5 @@
 <!-- ====== Pricing Section Start -->
-<x-layout.section>
+<x-layout.section id="packages">
     <x-layout.container>
         <x-banner.heading subHeading="Our Packages"
             description="Each package offers a curated selection of services and features, making it easy to find your ideal celebration fit.">

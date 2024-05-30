@@ -2,8 +2,8 @@
     <x-home.hero />
     <x-home.why-us id="section1" />
     <x-home.features />
-    <x-banner.cta />
     <x-home.a-la-carte />
+    <x-banner.cta />
     <x-home.packages />
     <x-layout.section>
         <x-layout.container>
