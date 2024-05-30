@@ -44,7 +44,7 @@
 
 
 
-        <title>Laravel</title>
+        <title>{{ config('app.name', 'XPRT Events LLC') }}</title>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
