@@ -1,30 +1,47 @@
-<section class="h-[calc(100vh-70px)] text-white">
+<section class="h-[calc(100vh-0px)] text-white">
     {{-- h-full --}}
     <x-layout.container class="h-full flex items-center">
-        <div class='absolute inset-0 -z-10'>
+        <!-- <div class='absolute inset-0 -z-10'>
             {{-- w-full h-full --}}
             <video class='absolute h-full w-full object-cover' src={{asset('assets/videos/hero-video.mp4')}}
                 typeof='video/mp4' autoPlay loop muted></video>
             {{-- w-full h-full --}}
             <div class='absolute w-full h-full bg-black opacity-70'></div>
+        </div> -->
+        
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <!-- Background Image -->
+            <img 
+                src="{{ asset('assets/images/hero-image.png') }}"
+                alt="Elegant wedding reception atmosphere"
+                class="absolute h-full w-full object-cover object-top blur-[3px] brightness-65 contrast-90"
+                loading="eager"
+                fetchpriority="high"
+            />
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <!-- Optional: soft gradient for better text contrast -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-transparent"></div>
         </div>
+
         <div class="relative">
             {{-- grid md:grid-cols-4 xl:grid-cols-5 --}}
             <div class='text-center md:col-span-3 md:text-left'>
-                <h2 class="font-sans font-normal text-lg md:text-2xl mb-12">
-                    Jacksonville's Top-Tier Photo Booth Provider
+                <h2 class="font-sans font-medium uppercase text-sm md:text-base mb-10 tracking-wider text-white/80">
+                    Jacksonville Wedding Photo Booth
                 </h2>
                 <h1 class="mb-9">
-                    We Craft Unforgettable <span
-                        class="block mt-6 font-vibes font-normal text-7xl lg:text-8xl tracking-wide">Photobooth
-                        Experiences</span>
+                    Elevate Your <span
+                        class="block mt-6 font-vibes font-normal text-6xl md:text-7xl leading-none">Wedding Reception</span>
                 </h1>
-                <p class="text-white md:text-2xl mb-6">
-                    Elevate Weddings & Corporate Events with Our Custom Taylored Premium Photobooth Services
+                <p class="text-white/90 md:text-2xl mb-20 max-w-2xl">
+                    A clean, modern photo booth experience that keeps guest engaged and delivers memories worth sharing.
                 </p>
                 <div class="mt-9 flex flex-col md:flex-row gap-3">
-                    <a class="btn btn-primary" href="{{ route('contact.index') }}">Book Now</a>
-                    <a class="btn btn-secondary text-white" href="#section1">Learn More</a>
+                    <a class="btn btn-primary" href="{{ route('contact.index') }}">Check Availability</a>
+                    <a class="btn btn-secondary" href="#packages">View Packages</a>
                 </div>
             </div>
         </div>
