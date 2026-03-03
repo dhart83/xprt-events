@@ -30,3 +30,34 @@ window.addEventListener("DOMContentLoaded", (event) => {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const openBtn = document.getElementById("nav-open");
+    const closeBtn = document.getElementById("nav-close");
+    const overlay = document.getElementById("nav-overlay");
+    const panel = document.getElementById("mobile-nav");
+
+    if (!openBtn || !closeBtn || !overlay || !panel) return;
+
+    function openNav() {
+        overlay.classList.remove("hidden");
+        panel.classList.remove("translate-x-full");
+        openBtn.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeNav() {
+        panel.classList.add("translate-x-full");
+        openBtn.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+        setTimeout(() => overlay.classList.add("hidden"), 200);
+    }
+
+    openBtn.addEventListener("click", openNav);
+    closeBtn.addEventListener("click", closeNav);
+    overlay.addEventListener("click", closeNav);
+
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeNav();
+    });
+});
