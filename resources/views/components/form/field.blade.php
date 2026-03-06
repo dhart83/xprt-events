@@ -1,36 +1,49 @@
 <fieldset>
-
-    <label for={{ $for }} class="block font-bold">{{ $slot }}
-        <span class="text-gray-400 font-normal">{{ $note }}</span>
+    <label for="{{ $for }}" class="block font-semibold">
+        {{ $slot }}
+        @if(!empty($note))
+            <span class="text-gray-400 font-normal">{{ $note }}</span>
+        @endif
     </label>
 
-    @if ($type == 'textarea')
+    @php
+        $baseClasses = "mt-2 w-full rounded-lg border border-gray-200 bg-white py-2 px-3 focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold";
+    @endphp
 
-    <textarea id={{ $for }} name={{ $for }} {{ $attributes->class(["w-full py-2 px-3 rounded-lg border border-gray-300 dark:bg-white/10 focus:border-secondary dark:border-black
-        dark:focus:border-secondary focus:outline-none"]) }}
-        rows="4">
-    </textarea>
+    @if ($type === 'textarea')
+        <textarea
+            id="{{ $for }}"
+            name="{{ $for }}"
+            rows="4"
+            {{ $attributes->class([$baseClasses]) }}
+        >{{ old($for) }}</textarea>
 
-    @elseif ($type == 'select')
+    @elseif ($type === 'select')
+        <select
+            id="{{ $for }}"
+            name="{{ $for }}"
+            {{ $attributes->class([$baseClasses]) }}
+        >
+            {{-- Placeholder option --}}
+            <option value="" disabled {{ old($for) ? '' : 'selected' }}>
+                Select one…
+            </option>
 
-    <select name={{ $for }} id={{ $for }} {{ $attributes->class(["w-full py-2 px-3 rounded-lg border border-gray-300
-        dark:bg-white/10 focus:border-secondary dark:border-black
-        dark:focus:border-secondary focus:outline-none"]) }}>
-        @foreach ( explode(',', $values) as $value)
-        <option value="{{ trim($value) }}" {{ $loop->index == 1 ? 'selected' : '' }}>{{ trim($value) }}</option>
-        @endforeach
-    </select>
+            @foreach (explode(',', $values) as $value)
+                @php $v = trim($value); @endphp
+                <option value="{{ $v }}" {{ old($for) === $v ? 'selected' : '' }}>
+                    {{ $v }}
+                </option>
+            @endforeach
+        </select>
 
     @else
-
-
-    <input type={{ $type }} id={{ $for }} name={{ $for }} {{ $attributes->class(
-    ["w-full py-2 px-3 rounded-lg border border-gray-300 dark:bg-white/10 focus:border-secondary dark:border-black
-    dark:focus:border-secondary focus:outline-none"])
-    }} />
-
+        <input
+            type="{{ $type }}"
+            id="{{ $for }}"
+            name="{{ $for }}"
+            value="{{ old($for) }}"
+            {{ $attributes->class([$baseClasses]) }}
+        />
     @endif
-
-
-
 </fieldset>

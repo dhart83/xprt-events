@@ -19,4 +19,4 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
-Route::post('contact', [ContactController::class, 'submit'])->name('contact.submit');
+Route::post('contact', [ContactController::class, 'submit'])->name('contact.submit')->middleware('throttle:contact');

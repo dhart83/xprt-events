@@ -1,38 +1,89 @@
-<!-- ====== Modal Section Start -->
-<section x-data="{modalOpen: false}">
-    <div class="container mx-auto py-20">
-        <button @click="modalOpen = true" class="bg-primary rounded-full py-3 px-6 text-base font-medium text-white">
-            Open Modal
-        </button>
-    </div>
-    <div x-show="modalOpen" x-transition
-        class="fixed top-0 left-0 flex h-full min-h-screen w-full items-center justify-center bg-black bg-opacity-90 px-4 py-5">
-        <div @click.outside="modalOpen = false"
-            class="w-full max-w-[570px] rounded-[20px] bg-white py-12 px-8 text-center md:py-[60px] md:px-[70px]">
-            <h3 class="text-dark pb-2 text-xl font-bold sm:text-2xl">
-                Your Message Sent Successfully
-            </h3>
-            <span class="bg-primary mx-auto mb-6 inline-block h-1 w-[90px] rounded"></span>
-            <p class="text-body-color mb-10 text-base leading-relaxed">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text ever
-                since
+<!-- ====== Modal Section Start (On-brand) -->
+<section x-data="{ modalOpen: false }">
+  <div class="container mx-auto py-20">
+    <!-- Demo trigger button: make it match your primary button style -->
+    <button
+      @click="modalOpen = true"
+      class="btn btn-primary"
+    >
+      Open Modal
+    </button>
+  </div>
+
+  <!-- Overlay -->
+  <div
+    x-show="modalOpen"
+    x-transition.opacity
+    class="fixed inset-0 z-50 flex items-center justify-center px-4 py-6"
+    aria-labelledby="modal-title"
+    role="dialog"
+    aria-modal="true"
+  >
+    <!-- Backdrop -->
+    <div
+      class="absolute inset-0 bg-slate-950/70 backdrop-blur-sm"
+      @click="modalOpen = false"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Panel -->
+    <div
+      @click.outside="modalOpen = false"
+      x-transition
+      class="relative w-full max-w-[560px] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10"
+    >
+      <!-- Brand accent -->
+      <div class="h-1.5 w-full bg-[color:var(--gold)]"></div>
+
+      <div class="px-7 py-8 sm:px-10 sm:py-10 text-left">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="eyebrow">
+              Confirmation
             </p>
-            <div class="-mx-3 flex flex-wrap">
-                <div class="w-1/2 px-3">
-                    <button @click="modalOpen = false"
-                        class="text-dark block w-full rounded-lg border border-[#E9EDF9] p-3 text-center text-base font-medium transition hover:border-red-600 hover:bg-red-600 hover:text-white">
-                        Cancel
-                    </button>
-                </div>
-                <div class="w-1/2 px-3">
-                    <button
-                        class="bg-primary border-primary block w-full rounded-lg border p-3 text-center text-base font-medium text-white transition hover:bg-opacity-90">
-                        View Details
-                    </button>
-                </div>
-            </div>
+            <h3
+              id="modal-title"
+              class="mt-2 text-xl sm:text-2xl font-semibold text-slate-900"
+            >
+              Your message was sent
+            </h3>
+          </div>
+
+          <!-- Close -->
+          <button
+            @click="modalOpen = false"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-[color:var(--gold)]/40"
+            aria-label="Close modal"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
         </div>
+
+        <p class="mt-4 text-sm leading-relaxed text-slate-600">
+          We’ll reply within 1 business day. If your date is coming up soon, include your venue and guest count for faster confirmation.
+        </p>
+
+        <!-- Action row -->
+        <div class="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+          <!-- Secondary -->
+          <button
+            @click="modalOpen = false"
+            class="btn btn-secondary"
+          >
+            Close
+          </button>
+
+          <!-- Primary -->
+          <button
+            class="btn btn-primary"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <!-- ====== Modal Section End -->

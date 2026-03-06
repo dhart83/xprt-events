@@ -1,35 +1,32 @@
 <x-mail::message>
-# New Customer Inquiry
-<br>
+# New Inquiry — {{ $event }} ({{ $date }})
 
-## Contact Information
 <x-mail::panel>
-**Full Name**: {{ $fname }} {{ $lname }}
+**Lead:** {{ $fname }} {{ $lname }}  
+**Email:** <a href="mailto:{{ $email }}">{{ $email }}</a>  
+**Phone:** <a href="tel:{{ preg_replace('/[^0-9+]/', '', $phone) }}">{{ $phone }}</a>
+</x-mail::panel>
 
-**Email Address**: {{ $email }}
-
-**Phone Number**: {{ $phone }}
-
-@if ($ext)
-**Extension:** {{ $ext }}
+<x-mail::panel>
+**Event Date:** {{ $date }}  
+**Event Type:** {{ $event }}  
+@if (!empty($venue))
+**Venue / Location:** {{ $venue }}  
+@endif
+@if (!empty($package))
+**Package Interest:** {{ $package }}  
 @endif
 </x-mail::panel>
 
-<br>
-
-## Event Details
+## Message
 <x-mail::panel>
-**Event Date:** {{ $date }}
-
-**Event Type:** {{ $event }}
-
-**About Event:** {{ $body }}
+{!! nl2br(e($messageBody)) !!}
 </x-mail::panel>
 
-<br>
+<x-mail::subcopy>
+Tip: hit **Reply** — this email is configured to reply directly to {{ $fname }}.
+</x-mail::subcopy>
 
-## Budget Information
-<x-mail::panel>
-**Budget Range:** {{ $budget }}
-</x-mail::panel>
+—  
+{{ config('mail.from.name') }}
 </x-mail::message>
