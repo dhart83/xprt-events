@@ -1,60 +1,58 @@
-<!-- ====== About Section Start -->
-<x-layout.section {{ $attributes->merge(['class' => '', 'id' => ''])}}>
+<!-- ====== Experience Section Start ====== -->
+<x-layout.section {{ $attributes->merge(['class' => 'scroll-mt-16']) }}>
     <x-layout.container>
-        <div class="-mx-4 flex flex-wrap items-center justify-between">
-            <div class="w-full px-4 lg:w-6/12">
-                <div class="-mx-3 flex items-center sm:-mx-4">
-                    <div class="w-full px-3 sm:px-4 xl:w-1/2">
-                        <div class="py-3 sm:py-4">
-                            <img src={{ asset('assets/images/salsa/features/photo-without-filter.jpeg') }} alt=""
-                                class="w-full rounded-2xl" />
-                        </div>
-                        <div class="py-3 sm:py-4">
-                            <video autoplay loop muted playsinline class="w-full rounded-2xl">
-                                <source src={{ asset('assets/images/salsa/features/gif-no-filter.mp4') }}
-                                    type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                    <div class="w-full px-3 sm:px-4 xl:w-1/2">
-                        <div class="relative z-10 my-4">
-                            <video autoplay loop muted playsinline class="w-full rounded-2xl">
-                                <source src={{ asset('assets/images/salsa/features/video-no-filter.mp4') }}
-                                    type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <span class="absolute -right-7 -bottom-7 z-[-1]">
-                                <img src={{ asset('assets/images/accents/dot-square.svg') }} alt="">
-                            </span>
-                        </div>
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+
+            <!-- Image Column -->
+            <div class="w-full lg:w-6/12">
+                <div class="mx-auto w-full max-w-sm lg:max-w-md">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+                        <img 
+                            src="{{ asset('assets/images/salsa/wedding.png') }}" 
+                            alt="Guests enjoying XPRT Events photo booth"
+                            class="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
             </div>
-            <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
-                <div class="mt-10 lg:mt-0">
-                    <x-banner.heading subHeading="Why Choose Us" class="mb-8 lg:mb-8 text-start ml-0">
-                        Experience the Difference with XPRT Events.
-                    </x-banner.heading>
-                    <p class="text-body-color mb-8 text-base">
-                        Discover a world of possibilities with our state-of-the-art photo booths, the perfect
-                        companions for weddings, proms,
-                        corporate gatherings, birthdays, and chic soirées. Equipped with cutting-edge technology and
-                        an array of entertaining
-                        add-ons, we ensure that every moment is captured in its full glory.
+
+            <!-- Content Column -->
+            <div class="w-full lg:w-6/12">
+                <div class="max-w-xl">
+
+                    <p class="eyebrow">
+                        Why Couples Choose XPRT Events
                     </p>
-                    <p class="text-body-color mb-12 text-base">
-                        Our photo booths offer immersive green screen adventures, captivating boomerang gifs, and a
-                        touch of glamour with our
-                        skin-smoothing filters. Get ready to shine, and let us make your memories unforgettable.
+
+                    <h2 class="mb-4">
+                        A refined photo booth experience that elevates your reception.
+                    </h2>
+
+                    <p>
+                        XPRT Events delivers a clean, modern booth setup designed for upscale weddings
+                        with professional execution that keeps your timeline smooth and your guests engaged.
                     </p>
+
+                    <ul class="feature-list my-10">
+                        <li>Crafted to complement elegant venues with a clean, refined aesthetic.</li>
+                        <li>Seamless setup and clear communication planners trust.</li>
+                        <li>Fast capture with instant digital delivery guests actually use.</li>
+                        <li>Curated online gallery after the event — every moment in one place.</li>
+                    </ul>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="{{ route('contact.index') }}" class="btn btn-primary">
+                            Check Availability
+                        </a>
+                        <a href="#packages" class="btn btn-secondary">
+                            View Packages
+                        </a>
+                    </div>
+
                 </div>
-                {{-- <div class="flex flex-col md:flex-row gap-3">
-                    <a class="btn btn-primary" href="{{ route('contact.index') }}">Book Now</a>
-                    <a class="btn btn-secondary" href="#section2">Learn More</a>
-                </div> --}}
             </div>
+
         </div>
     </x-layout.container>
 </x-layout.section>
-<!-- ====== About Section End -->
+<!-- ====== Experience Section End ====== -->
