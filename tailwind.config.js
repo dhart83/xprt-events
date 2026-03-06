@@ -1,38 +1,36 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: "class",
-    content: ["./resources/**/*.{blade.php, php, js}"],
+    content: ["./resources/**/*.{blade.php, php, js, vue}"],
     theme: {
         extend: {
             fontFamily: {
                 serif: ["Playfair Display", "serif"],
                 sans: ["Inter", "sans-serif"],
-                vibes: ["Great Vibes", "sans"],
+                vibes: ["Great Vibes", "cursive"],
             },
-            backgroundColor: {
-                primary: "var(--color-primary)",
-                secondary: "var(--color-secondary)",
-                accent: "var(--color-accent)",
-                dark: "var(--bg-dark)",
-                light: "var(--bg-light)",
+            colors: {
+                // Legacy aliases so existing classes keep working
+                primary: "rgb(var(--xprt-navy) / <alpha-value>)",
+                secondary: "rgb(var(--xprt-gold) / <alpha-value>)",
+                accent: "rgb(var(--xprt-rose) / <alpha-value>)",
+                dark: "rgb(var(--xprt-surface-dark) / <alpha-value>)",
+                light: "rgb(var(--xprt-surface-light) / <alpha-value>)",
+                brand: {
+                    navy: "rgb(var(--xprt-navy) / <alpha-value>)",
+                    gold: "rgb(var(--xprt-gold) / <alpha-value>)",
+                    goldText: "rgb(var(--xprt-gold-text) / <alpha-value>)",
+                    rose: "rgb(var(--xprt-rose) / <alpha-value>)",
+                    bg: "rgb(var(--xprt-bg) / <alpha-value>)",
+                    text: "rgb(var(--xprt-text) / <alpha-value>)",
+                    surfaceDark:
+                        "rgb(var(--xprt-surface-dark) / <alpha-value>)",
+                    surfaceLight:
+                        "rgb(var(--xprt-surface-light) / <alpha-value>)",
+                },
             },
-            textColor: {
-                primary: "var(--color-primary)",
-                secondary: "var(--color-secondary)",
-                accent: "var(--color-accent)",
-                dark: "var(--text-dark)",
-                light: "var(--text-light)",
-            },
-            borderColor: {
-                primary: "var(--color-primary)",
-                secondary: "var(--color-secondary)",
-                accent: "var(--color-accent)",
-                dark: "#var(--text-dark)",
-                light: "var(--text-light)",
-            },
-            gradientColorStops: {
-                primary: "var(--color-primary)",
-                secondary: "var(--color-secondary)",
+            borderRadius: {
+                xl: "var(--radius)",
             },
         },
     },
