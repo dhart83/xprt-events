@@ -8,22 +8,47 @@
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden xl:block">
+            <nav class="hidden lg:block">
                 <ul class="flex items-center">
-                    @foreach ($links as $link)
+                    {{-- @foreach ($links as $link)
                         <li>
                             <a href="{{ route($link['href']) }}"
                                class="ml-10 text-sm font-medium tracking-wide text-white/80 transition hover:text-white">
                                 {{ $link['name'] }}
                             </a>
                         </li>
-                    @endforeach
+                    @endforeach --}}
+
+                    <li>
+                        <a href="{{ route('home') }}"
+                            class="ml-10 text-sm font-medium tracking-wide text-white/80 transition hover:text-white">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('home') }}#packages"
+                            class="ml-10 text-sm font-medium tracking-wide text-white/80 transition hover:text-white">
+                            Packages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('home') }}#faq"
+                            class="ml-10 text-sm font-medium tracking-wide text-white/80 transition hover:text-white">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('contact.index') }}" 
+                            class="ml-10 btn btn-primary">
+                            Check Availability
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <!-- Mobile Hamburger -->
             <button id="nav-open"
-                class="xl:hidden rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-white/30"
+                class="lg:hidden rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-white/30"
                 aria-label="Open menu"
                 aria-controls="mobile-nav"
                 aria-expanded="false"
@@ -39,15 +64,15 @@
 
 <!-- Mobile Overlay -->
 <div id="nav-overlay"
-     class="fixed inset-0 z-40 hidden bg-black/60 xl:hidden">
+     class="fixed inset-0 z-40 hidden bg-black/60 lg:hidden">
 </div>
 
 <!-- Mobile Slide Panel -->
 <aside id="mobile-nav"
-       class="fixed right-0 top-0 z-50 h-dvh w-80 max-w-[85vw]
+       class="fixed right-0 top-0 z-50 h-dvh w-80 max-w-[85vw] h-full
               translate-x-full border-l border-white/10
               bg-black/90 backdrop-blur-xl p-6
-              transition-transform duration-200 ease-out xl:hidden">
+              transition-transform duration-200 ease-out lg:hidden">
 
     <div class="flex items-center justify-between">
         <span class="text-sm font-medium tracking-wide text-white/80 uppercase">Menu</span>
@@ -60,13 +85,36 @@
     </div>
 
     <ul class="mt-8 space-y-4">
-        @foreach ($links as $link)
+        {{-- @foreach ($links as $link)
             <li>
                 <a href="{{ route($link['href']) }}"
                    class="block text-base font-medium tracking-wide text-white/80 transition hover:text-white">
                     {{ $link['name'] }}
                 </a>
             </li>
-        @endforeach
+        @endforeach --}}
+        <li>
+            <a href="{{ route('home') }}"
+                class="block text-base font-medium tracking-wide text-white/80 transition hover:text-white">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('home') }}#packages"
+                class="block text-base font-medium tracking-wide text-white/80 transition hover:text-white">
+                Packages
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('home') }}#faq"
+                class="block text-base font-medium tracking-wide text-white/80 transition hover:text-white">
+                FAQ
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('contact.index') }}" class="mt-10 btn btn-primary">
+                Check Availability
+            </a>
+        </li>
     </ul>
 </aside>
