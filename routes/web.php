@@ -18,5 +18,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::view('/jacksonville-photo-booth', 'locations.jacksonville')->name('locations.jacksonville');
+Route::view('/privacy-policy', 'legal.privacy')->name('privacy');
+Route::view('/terms-of-service', 'legal.terms')->name('terms');
+
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('contact', [ContactController::class, 'submit'])->name('contact.submit')->middleware('throttle:contact');

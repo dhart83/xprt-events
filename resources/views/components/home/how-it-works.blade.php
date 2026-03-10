@@ -17,22 +17,21 @@
                     </h2>
 
                     <p>
-                        We keep the process straightforward so you get a premium experience without extra planning work.
-                        From the first message to the final gallery, everything is handled professionally and on time.
+                        We keep the process simple so you get a premium experience without extra planning work. From the first message to the final gallery, everything is handled professionally and on time.
                     </p>
                 </div>
                 <div class="mt-10 w-full grid lg:grid-cols-2 gap-6">
                         <!-- Step 1 -->
-                        <div class="rounded-2xl border border-black/10 p-6">
+                        <div class="rounded-2xl bg-white border border-black/10 p-6 shadow-sm transition hover:shadow-md">
                             <p class="text-xs tracking-wide uppercase text-brand-goldText mb-2">Step 1</p>
                             <h3 class="mb-2 font-serif text-xl">Check availability</h3>
                             <p class="text-body-color text-base">
-                                Send your date, venue, and estimated guest count. We’ll confirm availability and recommend the best package.
+                                Send your date, venue, and estimated guest count. We'll confirm availability and recommend the best package for your event.
                             </p>
                         </div>
 
                         <!-- Step 2 -->
-                        <div class="rounded-2xl border border-black/10 p-6">
+                        <div class="rounded-2xl bg-white border border-black/10 p-6 shadow-sm transition hover:shadow-md">
                             <p class="text-xs tracking-wide uppercase text-brand-goldText mb-2">Step 2</p>
                             <h3 class="mb-2 font-serif text-xl">Customize the look</h3>
                             <p class="text-body-color text-base">
@@ -41,16 +40,16 @@
                         </div>
 
                         <!-- Step 3 -->
-                        <div class="rounded-2xl border border-black/10 p-6">
+                        <div class="rounded-2xl bg-white border border-black/10 p-6 shadow-sm transition hover:shadow-md">
                             <p class="text-xs tracking-wide uppercase text-brand-goldText mb-2">Step 3</p>
-                            <h3 class="mb-2 font-serif text-xl">We run the booth</h3>
+                            <h3 class="mb-2 font-serif text-xl">We handle the booth</h3>
                             <p class="text-body-color text-base">
-                                We arrive early, set up, and manage the booth so guests have an effortless experience all night.
+                                We arrive early, set up, and manage the booth so guests enjoy an effortless experience all night.
                             </p>
                         </div>
 
                         <!-- Step 4 -->
-                        <div class="rounded-2xl border border-black/10 p-6">
+                        <div class="rounded-2xl bg-white border border-black/10 p-6 shadow-sm transition hover:shadow-md">
                             <p class="text-xs tracking-wide uppercase text-brand-goldText mb-2">Step 4</p>
                             <h3 class="mb-2 font-serif text-xl">Receive your gallery</h3>
                             <p class="text-body-color text-base">

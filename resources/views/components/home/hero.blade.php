@@ -20,18 +20,18 @@
         </div>
 
         <div class="relative">
-            <div class='text-center md:col-span-3 md:text-left'>
-                <h2 class="eyebrow font-sans font-medium uppercase text-sm md:text-base mb-10 tracking-wider text-white/80">
+            <div class='text-center sm:col-span-3 sm:text-left'>
+                <h2 class="eyebrow capitalize font-sans font-medium text-sm md:text-base mb-10 tracking-wider text-white/80">
                     Jacksonville Wedding Photo Booth
                 </h2>
                 <h1 class="mb-9 font-normal text-gray-200">
                     Elevate Your <span
-                        class="block mt-6 font-vibes font-normal text-brand-gold text-6xl md:text-7xl leading-none">Wedding Reception</span>
+                        class="block mt-6 font-vibes font-normal text-brand-gold text-6xl md:text-7xl leading-none">Wedding Reception Experience</span>
                 </h1>
-                <p class="text-white/90 md:text-2xl mb-20 max-w-2xl">
-                    Elegant backdrops, instant sharing, and professional on-site service for weddings across Jacksonville.
+                <p class="text-white/90 md:text-xl mb-20 max-w-2xl">
+                    Elegant backdrops, instant digital sharing, and professional on-site service designed for unforgettable Jacksonville weddings.
                 </p>
-                <div class="mt-9 flex flex-col md:flex-row gap-3">
+                <div class="mt-9 flex flex-col sm:flex-row gap-4">
                     <a class="btn btn-primary" href="{{ route('contact.index') }}">Check Availability</a>
                     <a class="btn btn-secondary text-brand-gold" href="#packages">View Packages</a>
                 </div>

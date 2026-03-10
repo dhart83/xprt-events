@@ -2,27 +2,22 @@
 <x-layout.section {{ $attributes->merge(['class' => 'scroll-mt-16']) }}>
     <x-layout.container>
 
-        <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
 
             <p class="eyebrow">Wedding Packages</p>
 
             <h2 class="mb-4">Investment designed for elegant celebrations.</h2>
 
             <p>
-                Transparent options. Professional execution. Every package includes full setup,
-                on-site management, and digital delivery.
+                Transparent options. Professional execution. Every package includes full setup, on-site management, and instant digital sharing.
             </p>
 
         </div>
-
-        <p class="text-center text-gray-600 text-sm mb-16">
-            All packages include setup, teardown, and a professional attendant.
-        </p>
         
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             <!-- Essential -->
-            <div class="rounded-2xl border border-brand-gray-200 p-8 flex flex-col">
+            <div class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col shadow-sm transition hover:shadow-md">
                 <h3 class="font-serif text-2xl text-brand-goldText mb-4">Essential</h3>
                 <p class="text-3xl text-brand-navy font-semibold mb-6">
                     Starting at $1,295
@@ -67,7 +62,7 @@
             </div>
 
             <!-- Signature (Most Popular) -->
-            <div class="rounded-2xl border-2 border-brand-gold p-8 flex flex-col shadow-lg relative">
+            <div class="rounded-2xl border-2 border-brand-gold bg-white p-8 flex flex-col shadow-lg relative transition hover:shadow-xl">
                 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-white text-xs px-4 py-1 rounded-full tracking-wide">
                     Most Popular
                 </div>
@@ -122,7 +117,7 @@
             </div>
 
             <!-- Luxury -->
-            <div class="rounded-2xl border border-gray-200 p-8 flex flex-col">
+            <div class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col shadow-sm transition hover:shadow-md">
                 <h3 class="font-serif text-2xl text-brand-goldText mb-4">Luxury</h3>
                 <p class="text-3xl text-brand-navy font-semibold mb-6">
                     Starting at $2,395
@@ -133,7 +128,7 @@
                         <svg class="w-5 h-5 text-brand-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
                         </svg>
-                        5+ Hours of Coverage
+                        5 Hours of Booth Coverage
                     </li>
                     <li class="flex gap-3">
                         <svg class="w-5 h-5 text-brand-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
@@ -173,6 +168,10 @@
             </div>
 
         </div>
+
+        <p class="text-center text-gray-600 text-sm mt-4 lg:mt-16">
+            * Custom packages available for larger weddings and multi-day events.
+        </p>
 
     </x-layout.container>
 </x-layout.section>

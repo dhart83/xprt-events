@@ -1,21 +1,21 @@
 <fieldset>
-    <label for="{{ $for }}" class="block font-semibold">
+    <label for="{{ $for }}" class="block text-sm font-semibold text-brand-navy sm:text-base">
         {{ $slot }}
         @if(!empty($note))
-            <span class="text-gray-400 font-normal">{{ $note }}</span>
+            <span class="ml-1 font-normal text-brand-goldText">{{ $note }}</span>
         @endif
     </label>
 
     @php
-        $baseClasses = "mt-2 w-full rounded-lg border border-gray-200 bg-white py-2 px-3 focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold";
+        $baseClasses = "mt-2 w-full rounded-xl border border-brand-navy/10 bg-white px-4 py-3 text-brand-text placeholder:text-brand-text/45 shadow-sm transition focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/25";
     @endphp
 
     @if ($type === 'textarea')
         <textarea
             id="{{ $for }}"
             name="{{ $for }}"
-            rows="4"
-            {{ $attributes->class([$baseClasses]) }}
+            rows="5"
+            {{ $attributes->class([$baseClasses . ' min-h-[140px] resize-y']) }}
         >{{ old($for) }}</textarea>
 
     @elseif ($type === 'select')
@@ -24,7 +24,6 @@
             name="{{ $for }}"
             {{ $attributes->class([$baseClasses]) }}
         >
-            {{-- Placeholder option --}}
             <option value="" disabled {{ old($for) ? '' : 'selected' }}>
                 Select one…
             </option>

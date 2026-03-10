@@ -1,4 +1,9 @@
-<x-layout.app>
+<x-layout.app
+    title="Contact XPRT Events | Check Wedding Photo Booth Availability"
+    description="Contact XPRT Events to check availability for your wedding or event in Jacksonville, Florida. Fast responses and elegant digital photo booth experiences."
+    :canonical="url()->current()"
+    ogImage="{{ asset('images/seo/contact-og.jpg') }}"
+>
     <x-layout.section>
         <x-layout.container>
             <div class="text-center max-w-2xl mx-auto mb-16 mt-16">

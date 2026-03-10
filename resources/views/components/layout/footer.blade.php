@@ -9,14 +9,20 @@
                     <img class="w-28" src="{{ asset('assets/images/branding/logo.svg') }}" alt="XPRT Events logo">
                 </a>
 
-                <p class="mt-5 text-body-color">
-                    Premium photo booth experiences for weddings in Jacksonville and surrounding areas.
+                <p class="mt-5 text-brand-text">
+                    Premium photo booth experiences for weddings and events in Jacksonville.
                 </p>
 
-                <p class="mt-5 text-sm text-body-color">
+                <p class="mt-7 text-sm text-brand-text">
                     <span class="font-semibold text-gray-900">Service Area:</span>
-                    Jacksonville, FL + surrounding areas
+                    Jacksonville, FL and surrounding areas
                 </p>
+                <p class="mt-2 text-sm text-brand-text">
+                    Learn more about our 
+                    <a href="{{ route('locations.jacksonville') }}" class="font-medium text-sm text-brand-text underline hover:text-brand-goldText">
+                        Jacksonville photo booth
+                    </a>
+                    services.
             </div>
 
             <!-- Contact -->
@@ -62,10 +68,7 @@
                         <a class="hover:text-brand-goldText transition" href="{{ route('home') }}">Home</a>
                     </li>
                     <li>
-                        <a class="hover:text-brand-goldText transition" href="#packages">Packages</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-brand-goldText transition" href="#reviews">Google Reviews</a>
+                        <a class="hover:text-brand-goldText transition" href="{{ route('home') }}#packages">Packages</a>
                     </li>
                     <li>
                         <a class="hover:text-brand-goldText transition" href="{{ route('contact.index') }}">Contact</a>
@@ -73,13 +76,19 @@
 
                     {{-- Update these when you have URLs --}}
                     <li class="pt-2">
-                        <a class="hover:text-brand-goldText transition" href="#" target="_blank" rel="noopener">
+                        
+                        <a class="hover:text-brand-goldText transition" href="https//www.instagram.com/xprtevents" target="_blank" rel="noopener">
                             Instagram
                         </a>
                     </li>
                     <li>
-                        <a class="hover:text-brand-goldText transition" href="#" target="_blank" rel="noopener">
-                            View All Google Reviews
+                        <a class="hover:text-brand-goldText transition" href="https://www.facebook.com/xprtevents" target="_blank" rel="noopener">
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-brand-goldText transition" href="https://maps.app.goo.gl/BJorPBcsZhDWCb9V7" target="_blank" rel="noopener">
+                            Google Reviews
                         </a>
                     </li>
                 </ul>
@@ -92,8 +101,8 @@
 
             <div class="flex gap-6">
                 {{-- Add real pages later if you create them --}}
-                {{-- <a class="hover:text-gray-900 transition" href="{{ route('privacy') }}">Privacy</a>
-                <a class="hover:text-gray-900 transition" href="{{ route('terms') }}">Terms</a> --}}
+                <a class="hover:text-gray-900 transition" href="{{ route('privacy') }}">Privacy</a>
+                <a class="hover:text-gray-900 transition" href="{{ route('terms') }}">Terms</a>
             </div>
         </div>
     </x-layout.container>

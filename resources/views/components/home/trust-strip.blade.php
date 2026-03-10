@@ -1,6 +1,6 @@
-<x-layout.section class="bg-white border-y border-gray-200 py-6 md:py-8">
+<x-layout.section class="bg-white border-y border-gray-200 md:py-16">
     <x-layout.container>
-        <div class="flex flex-col items-center gap-5">
+        <div class="flex flex-col items-center gap-10">
 
             {{-- top trust line --}}
             <div class="flex flex-col items-center justify-center gap-3 text-center sm:flex-row sm:text-left">

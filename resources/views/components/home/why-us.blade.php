@@ -28,15 +28,17 @@
                         A refined photo booth experience that elevates your reception.
                     </h2>
 
-                    <p>
+                    {{-- <p>
                         XPRT Events delivers a clean, modern booth setup designed for upscale weddings
                         with professional execution that keeps your timeline smooth and your guests engaged.
-                    </p>
+                    </p> --}}
+
+                    <p>XPRT Events delivers a clean, modern booth setup designed for upscale weddings. Professional execution keeps your timeline smooth and your guests engaged.</p>
 
                     <ul class="feature-list my-10">
                         <li>Crafted to complement elegant venues with a clean, refined aesthetic.</li>
                         <li>Seamless setup and clear communication planners trust.</li>
-                        <li>Fast capture with instant digital delivery guests actually use.</li>
+                        <li>Fast capture with instant digital delivery guests love.</li>
                         <li>Curated online gallery after the event — every moment in one place.</li>
                     </ul>
 
