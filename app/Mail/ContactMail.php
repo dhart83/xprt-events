@@ -15,11 +15,11 @@ class ContactMail extends Mailable
     use Queueable, SerializesModels;
 
     public string $fname;
-    public string $lname;
-    public string $phone;
+    public ?string $lname;
+    public ?string $phone;
     public string $email;
     public string $event;
-    public string $body;
+    public ?string $body;
     public string $date;
     public ?string $venue;
     public ?string $package;
@@ -29,11 +29,11 @@ class ContactMail extends Mailable
      */
     public function __construct(
         string $fname,
-        string $lname,
-        string $phone,
+        ?string $lname,
+        ?string $phone,
         string $email,
         string $event,
-        string $body,
+        ?string $body,
         string $date,
         ?string $venue = null,
         ?string $package = null
@@ -61,8 +61,8 @@ class ContactMail extends Mailable
             ),
             to: [
                 new Address(
-                    env('MAIL_TO_ADDRESS', 'contact@xprtevents.com'),
-                    'XPRT Events'
+                    config('mail.to.address'),
+                    config('mail.to.name')
                 ),
             ],
             replyTo: [

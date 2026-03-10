@@ -226,8 +226,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function seedLoadedAt(form) {
+        const loadedAt = qs(form, 'input[name="form_loaded_at"]');
+        if (loadedAt && !loadedAt.value) {
+            loadedAt.value = String(Date.now());
+        }
+    }
+
     function boot() {
         document.querySelectorAll("form[data-contact-form]").forEach((form) => {
+            seedLoadedAt(form);
             attachClearOnEdit(form);
             form.addEventListener("submit", (e) => {
                 e.preventDefault();

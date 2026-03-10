@@ -30,14 +30,14 @@ class ContactController extends Controller
         try {
             $validated = $request->validate([
                 'fname'   => ['required','string','max:255'],
-                'lname'   => ['required','string','max:255'],
-                'phone'   => ['required','string','max:30'],
+                'lname'   => ['nullable','string','max:255'],
+                'phone'   => ['nullable','string','max:30'],
                 'email'   => ['required','email','max:255'],
                 'event'   => ['required','string','max:255'],
                 'date'    => ['required','date','date_format:Y-m-d','after_or_equal:today'],
                 'venue'   => ['nullable','string','max:255'],
                 'package' => ['nullable','in:Not sure yet,Essential,Signature,Luxury'],
-                'body'    => ['required','string','max:2000'],
+                'body'    => ['nullable','string','max:2000'],
 
                 // traps
                 'website'        => ['nullable','string','max:0'],
@@ -52,11 +52,11 @@ class ContactController extends Controller
         try {
             Mail::to($to)->send(new ContactMail(
                 $validated['fname'],
-                $validated['lname'],
-                $validated['phone'],
+                $validated['lname'] ?? null,
+                $validated['phone'] ?? null,
                 $validated['email'],
                 $validated['event'],
-                $validated['body'],
+                $validated['body'] ?? null,
                 $validated['date'],
                 $validated['venue'] ?? null,
                 $validated['package'] ?? null
